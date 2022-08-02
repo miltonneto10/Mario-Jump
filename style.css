@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 20px solid rgb(4, 119, 4);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    width: 350px;
+    position: absolute;
+    animation: clouds-animation 25s infinite linear;
+}
+
+.clouds2 {
+    width: 150px;
+    padding-top: 200px;
+    position: absolute;
+    animation: clouds-animation 45s infinite linear;
+}
+
+button{
+    position: absolute;
+    padding: 10px 15px;
+    font-size: 22px;
+    border: 0;
+    border-radius: 5px;
+    color: rgb(199, 7, 7)
+}
+
+.sand {
+    width: auto;
+    height: 125px;
+    background-color: #a5630e;
+}
+
+.score{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: VT323;
+    text-shadow: 2px 2px 5px black;
+    color: rgb(255, 238, 0);
+    top: 30px;
+    left: 30px;
+    z-index: 10;
+}
+
+.restart-game{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-over{
+    text-align: center;
+    font-size: 200px;
+    color: rgb(255, 251, 0);
+    text-transform: uppercase;
+    z-index: 5;
+    display: none;
+    text-shadow: 2px 2px 5px black;   
+}
+.game-over h3{
+    font-family: VT323;
+    font-size: 150px;
+    margin: 0;
+    font-size: 3rem;
+    width: 100%;
+}
+
+@keyframes pipe-animation {
+    from{
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 180px;
+    }
+
+    60%{
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -350px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes clouds2-animation {
+    from {
+        right: -350px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes pipe-animation-score{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
